@@ -1,0 +1,13 @@
+Skills,Threshold1,Threshold2,Course,Trainer1,Rating1,Reviews1,Trainer2,Rating2,Reviews2,Trainner3,Rating3,Reviews3
+python,0,24,Python Basics,Abhiekh,4,1000,Dinesh,4.5,2000,Madhu,5,3000
+python,25,49,Python Intermediate,Vamsi,4,4000,,,,,,
+python,50,84,Python Advance,Adarsh,4,7000,Preethi,4.5,8000,Varma,5,9000
+python,85,100,NULL,,,,,,,,,
+c,0,24,C Basics,Sharma,4,1000,Naresh,4.5,2000,Suresh,5,3000
+c,25,49,C Intermediate,Archana,4,4000,Arjun,4.5,5000,Prasad,5,6000
+c,50,79,C Advance,Kiran,4,7000,Preethi,4.5,8000,,,
+c,80,100,NULL,,,,,,,,,
+java,0,24,NULL,Reddy,4,1000,Dev,4.5,2000,,,
+java,25,49,Java Intermediate,Arav,4,4000,Rohit,4.5,5000,,,
+java,50,59,Java Advance,Priyanka,4,7000,,,,,,
+java,65,100,NULL,,,,,,,,,

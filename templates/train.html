@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DivineAI PVT LTD</title>
+<style>	
+	.container
+	{
+		align: center;
+		margin: auto;
+		padding: 0px 50px;
+	}
+	.NavBar ul
+	{
+	  	list-style-type: none;
+	  	margin: 0;
+	 	padding: 0;
+	  	overflow: hidden;
+	  	background-color: #45a049;
+
+	}
+	.NavBar li
+	{
+		width: 25%;
+		margin: auto;
+		display: inline;
+	  	float: left;
+	}
+	.NavBar li a:hover
+	{
+		background-color: #111;
+	}
+	.NavBar li a 
+	{
+	  	display: block;
+	  	color: white;
+	  	text-align: center;
+	 	padding: 14px 16px;
+	  	text-decoration: none;
+	}
+	.testContainer
+	{
+		border-radius: 5px;
+  		background-color: #f2f2f2;
+  		padding: 20px 20px 50px 20px;
+	}
+	input[type=submit], input[type = button]
+	{
+	  	background-color: #4CAF50;
+  		color: white;
+		padding: 12px 20px;
+		border: none;
+ 		border-radius: 4px;
+  		cursor: pointer;
+  		float: right;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 align="center">DivineAI PVT LTD</h1>
+        <div class="NavBar">
+          <ul>
+            <li><a href="https://divineai.in/home.html#" target="_blank"><strong>Home</strong></a></li>
+            <li><a href=""><strong>About Us</strong></a></li>
+            <li><a href=""><strong>Services</strong></a></li>
+            <li><a href=""><strong>Contact Us</strong></a></li>
+          </ul>
+        </div>
+		<p align="center">Hurray!!! We have successfully extracted your skills. Now you have to pass the tests to get a Job Recommendation.</p>
+		<div class="testContainer">
+			<form action="{{url_for('train')}}">
+				<h3 align="center">Dear user, sadly you have failed a few tests... so we have recommended you some courses. Go through the courses and Try again </h3>
+				{% for trainer, train_course in train_skills.items() %}
+					<p>Take {{train_course}} by {{trainer[0]}} and has a rating of {{trainer[1]}} and reviews {{trainer[2]}} <button type="button" style="float: right; margin-right: 50px; padding: 5px" >Take course</button></p><br>
+				{% endfor %}
+				<h3 align="center">But you passed have the following tests </h3>
+				<p>Congratulations You have passed - 
+				<ol>
+				{% for pass in pass_skills %}
+					<li> {{pass}}</li>
+				{% endfor %}
+					</ol></p>
+				<input type="submit" name="submit">
+			</form>
+		</div>
+		
+	</div>
+</body>
+</html>
